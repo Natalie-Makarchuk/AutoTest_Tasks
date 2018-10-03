@@ -37,25 +37,27 @@ public class Main {
         - уместится ли круг в квадрате
         - уместится ли квадрат в круге */
 
-        double CalcR = Math.pow(CirA/Pi, 0.5);
-             //  out.println("R calculated = " + CalcR);
+        double CalcR = Math.pow((CirA/Pi), 0.5);
+               out.println("R calculated = " + CalcR);
 
         double CalcSqSide = Math.pow(SqA, 0.5);
-             //  out.println( "SqSide calculated = " + CalcSqSide);
+               out.println( "SqSide calculated = " + CalcSqSide);
 
-         double CalcSqDiag = Math.pow(2 * Math.pow(CalcSqSide, 2), 0.5);
+        double CalcSqDiag = Math.pow((2 * Math.pow(CalcSqSide, 2)), 0.5);
+        out.println( "Calc_Square_diagonal calculated = " + CalcSqDiag);
 
 
         // Уместится ли круг к квадрате?
-        if ((CalcR * 2) >= CalcSqDiag) {
-             out.println("The Circle can be located inside the Square");
-         } else out.println("The Circle can not be located inside the Square");
+        if ((CalcR * 2) <= CalcSqSide) {
+            out.println("The Circle can be located inside the Square");
+        } else out.println("The Circle can not be located inside the Square");
 
 
         // уместится ли квадрат в круге?
-        if ((CalcR * 2) >= CalcSqSide) {
+        if ((CalcR * 2) >= CalcSqDiag) {
             out.println("The Square can be located inside the Circle");
         } else out.println("The Square can not be located inside the Circle");
+
 
     }
 
