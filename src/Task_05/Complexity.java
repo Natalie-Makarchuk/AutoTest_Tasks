@@ -25,5 +25,8 @@ public enum Complexity
         // either throw the IAE or return null, your choice.
         throw new IllegalArgumentException(String.valueOf(m));
     }
+    public int getValue() {
+        return compValue;
+    }
 
 }

@@ -46,7 +46,8 @@ public class TasksList {
         for (int i = 0; i <= tasksAmount - 1; i++) {
 
             Complexity currentTaskComplexity = tasks[i].getComplexity();
-            sumComplexityHours = sumComplexityHours + currentTaskComplexity.ordinal();
+            int tc = currentTaskComplexity.getValue();
+            sumComplexityHours = sumComplexityHours + tc;
         }
         out.println("Sum of hours for all tasks is " + sumComplexityHours);
 
