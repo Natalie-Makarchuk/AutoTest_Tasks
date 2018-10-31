@@ -30,7 +30,7 @@ public class TasksList {
             out.println("Enter the task name");
             String taskName = reader.next();
 
-            out.print("Enter the task #" + i + " and define the priority: High: 1, Medium: 2, Low: 1 " + "\n");
+            out.print("Enter the task #" + i + " and define the priority: High: 1, Medium: 2, Low: 3 " + "\n");
             int currentPriority = reader.nextInt();
 
             out.print("Enter the task #" + i + " complexity: ComplexTask: 4, MediumTask: 2, EasyTask: 1" + "\n");
