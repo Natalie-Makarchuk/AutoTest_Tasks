@@ -45,15 +45,15 @@ public class TasksList {
         int sumComplexityHours = 0;
         for (int i = 0; i <= tasksAmount - 1; i++) {
 
-            int oneTaskComplexity = (int) tasks[i].getComplexity();
-            sumComplexityHours = sumComplexityHours + oneTaskComplexity;
+            Complexity currentTaskComplexity = tasks[i].getComplexity();
+            sumComplexityHours = sumComplexityHours + currentTaskComplexity.ordinal();
         }
         out.println("Sum of hours for all tasks is " + sumComplexityHours);
 
 
         //  Cписок задач заданного приоритета (приоритет ввести с клавиатуры)
 
-        out.print("Set the priority for the tasks to be shown" + "\n");
+        /*out.print("Set the priority for the tasks to be shown" + "\n");
         int definedPriority = reader.nextInt();
 
         for (int i = 0; i <= tasksAmount - 1; i++) {
@@ -62,7 +62,7 @@ public class TasksList {
                {
                 out.println(tasks[i].getTaskName());
                }
-        }
+        }*/
 
 //        // какие задачи возможно сделать за N дней с учетом приоритета (N ввести с клавиатуры)
 //
