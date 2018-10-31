@@ -2,33 +2,34 @@ package Task_05;
 
 public class Task {
 
-    private Priority Priority1;
-    private Complexity Complexity1;
-    String taskName1;
+    private Priority taskPriority;
+    private Complexity taskComplexity;
+    String taskName;
 
-    public Task(String taskName, String currentPriority, String currentComplexity) {
-
-        this.taskName1 = taskName;
-           this.Priority1 = Priority.valueOf(currentPriority);
-          this.Complexity1 = Complexity.valueOf(currentComplexity);
+    public Task(String currentName, int currentPriority, int currentComplexity) {
+//    this.Priority1 = Priority.valueOf(currentPriority);
+        this.taskName = currentName;
+        this.taskPriority = Priority.priorityValue(currentPriority);
+        this.taskComplexity = Complexity.complexityValue(currentComplexity);
 
         //switch (currentPriority){
-         //   case 1: Priority.High; break;
+        //   case 1: Priority.High; break;
         //}
         //this.Priority1 = Priority.High;
         //this.Complexity1 = this.getComplexity(currentComplexity);
     }
 
     public String getTaskName() {
-        return taskName1;   }
+        return this.taskName;
+    }
 
-    public int getPriority() {
-        return Priority1.value; }
+    public Priority getPriority() {
+        return this.taskPriority;
+    }
 
-    public int getComplexity() {
-        return Complexity1.taskComplexityValue; }
-
-
+    public Complexity getComplexity() {
+        return this.taskComplexity;
+    }
 
 
 }
