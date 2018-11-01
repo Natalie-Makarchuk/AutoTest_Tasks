@@ -25,4 +25,9 @@ public enum Priority
         // either throw the IAE or return null, your choice.
         throw new IllegalArgumentException(String.valueOf(n));
     }
+
+    public int getValue() {
+        return prValue;
+    }
+
 }

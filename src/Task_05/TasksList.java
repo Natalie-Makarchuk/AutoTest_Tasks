@@ -33,7 +33,7 @@ public class TasksList {
             out.print("Enter the task #" + i + " and define the priority: High: 1, Medium: 2, Low: 3 " + "\n");
             int currentPriority = reader.nextInt();
 
-            out.print("Enter the task #" + i + " complexity: ComplexTask: 4, MediumTask: 2, EasyTask: 1" + "\n");
+            out.print("Enter the task #" + i + " complexity (hrs): ComplexTask: 4, MediumTask: 2, EasyTask: 1" + "\n");
             int currentComplexity = reader.nextInt();
 
             tasks[i] = new Task(taskName, currentPriority, currentComplexity);
@@ -54,24 +54,27 @@ public class TasksList {
 
         //  Cписок задач заданного приоритета (приоритет ввести с клавиатуры)
 
-        /*out.print("Set the priority for the tasks to be shown" + "\n");
+        out.print("Set the priority for the tasks to be shown" + "\n");
         int definedPriority = reader.nextInt();
 
         for (int i = 0; i <= tasksAmount - 1; i++) {
 
-            if (definedPriority == (int) tasks[i].getComplexity() )
+            Priority currentTaskPriority = tasks[i].getPriority();
+            int tp = currentTaskPriority.getValue();
+
+            if (definedPriority == tp )
                {
                 out.println(tasks[i].getTaskName());
                }
-        }*/
+        }
 
-//        // какие задачи возможно сделать за N дней с учетом приоритета (N ввести с клавиатуры)
-//
-//        out.print("Set the amount of available days" + "\n");
-//        int daysAvailable = reader.nextInt();
-//
-//        int timeAvailable = daysAvailable * 8;
-//
+        // какие задачи возможно сделать за N дней с учетом приоритета (N ввести с клавиатуры)
+
+        out.print("Set the amount of available days" + "\n");
+        int daysAvailable = reader.nextInt();
+
+        int timeAvailable = daysAvailable * 8;
+
 //        while ()
 //
 
