@@ -62,22 +62,70 @@ public class TasksList {
             Priority currentTaskPriority = tasks[i].getPriority();
             int tp = currentTaskPriority.getValue();
 
-            if (definedPriority == tp )
-               {
+            if (definedPriority == tp) {
                 out.println(tasks[i].getTaskName());
-               }
+            }
         }
 
         // какие задачи возможно сделать за N дней с учетом приоритета (N ввести с клавиатуры)
 
         out.print("Set the amount of available days" + "\n");
         int daysAvailable = reader.nextInt();
+        int hoursAvailable = daysAvailable * 8;
 
-        int timeAvailable = daysAvailable * 8;
+        int sumHoursForPriorityX = 0;
 
-//        while ()
-//
+        // count sum of all the tasks with Priority = High
 
+        for (int i = 0; i <= tasksAmount - 1; i++) {
+
+            if (tasks[i].getPriority().equals(Priority.High)) {
+
+                int highHours = tasks[i].getPriority().getValue();
+
+                sumHoursForPriorityX = sumHoursForPriorityX + highHours;
+
+                if (sumHoursForPriorityX <= hoursAvailable)
+                    out.println(tasks[i].getTaskName());
+            }
+        }
+
+        // if time left at all ?
+        if (sumHoursForPriorityX >= 1)
+        {
+            // count sum of all the tasks with Priority = Medium in addition to High
+            for (int j = 0; j <= tasksAmount - 1; j++) {
+
+                if (tasks[j].getPriority().equals(Priority.Medium)) {
+                    Priority mediumTaskPriority = tasks[j].getPriority();
+                    int mediumHours = mediumTaskPriority.getValue();
+
+                    sumHoursForPriorityX = sumHoursForPriorityX + mediumHours;
+
+                    if (sumHoursForPriorityX <= hoursAvailable)
+                        out.println(tasks[j].getTaskName());
+                }
+            }
+        }
+
+        // if time left at all ?
+        if (sumHoursForPriorityX >= 1)
+        {
+            // count sum of all the tasks with Priority = Low in addition to High
+            for (int k = 0; k <= tasksAmount - 1; k++) {
+
+                if (tasks[k].getPriority().equals(Priority.Low)) {
+                    Priority lowTaskPriority = tasks[k].getPriority();
+                    int lowHours = lowTaskPriority.getValue();
+
+                    sumHoursForPriorityX = sumHoursForPriorityX + lowHours;
+
+                    if (sumHoursForPriorityX <= hoursAvailable)
+                        out.println(tasks[k].getTaskName());
+                }
+            }
+        }
     }
 
-    }
+}
+
