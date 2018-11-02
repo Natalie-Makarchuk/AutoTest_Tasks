@@ -97,8 +97,7 @@ public class TasksList {
             for (int j = 0; j <= tasksAmount - 1; j++) {
 
                 if (tasks[j].getPriority().equals(Priority.Medium)) {
-                    Priority mediumTaskPriority = tasks[j].getPriority();
-                    int mediumHours = mediumTaskPriority.getValue();
+                    int mediumHours = tasks[j].getPriority().getValue();
 
                     sumHoursForPriorityX = sumHoursForPriorityX + mediumHours;
 
@@ -115,8 +114,7 @@ public class TasksList {
             for (int k = 0; k <= tasksAmount - 1; k++) {
 
                 if (tasks[k].getPriority().equals(Priority.Low)) {
-                    Priority lowTaskPriority = tasks[k].getPriority();
-                    int lowHours = lowTaskPriority.getValue();
+                    int lowHours = tasks[k].getPriority().getValue();
 
                     sumHoursForPriorityX = sumHoursForPriorityX + lowHours;
 
