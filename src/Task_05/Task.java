@@ -13,8 +13,7 @@ public class Task {
         this.taskComplexity = Complexity.complexityValue(currentComplexity);
 
         //switch (currentPriority){
-        //   case 1: Priority.High; break;
-        //}
+        //   case 1: Priority.High; break; }
         //this.Priority1 = Priority.High;
         //this.Complexity1 = this.getComplexity(currentComplexity);
     }
